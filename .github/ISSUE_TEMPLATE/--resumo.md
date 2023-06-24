@@ -2,7 +2,6 @@
 name: "\U0001F4C4Resumo"
 about: Issues relacionadas aos resumos das aulas
 title: Resumo da Aula Xxxxxxxxx da etapa XX
-labels: "\U0001F4C4resumo"
 assignees: ''
 
 ---
