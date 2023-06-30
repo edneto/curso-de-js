@@ -4,13 +4,10 @@ const postAuthor = 'Matheus Saad'
 const postComments = 15
 
 // usando concatenação
-const postMessage = 'O post '' + postTitle + '', do ' + postAuthor + ', tem ' + postComments + ' comentários.'
-console.log(postMessage)
+//const postMessage = 'O post '' + postTitle + '', do ' + postAuthor + ', tem ' + postComments + ' comentários.'
 
 // usando template strings
 //const postMessage = `O post "${postTitle}", do ${postAuthor}, tem ${postComments} comentários.`
-
-
 
 //criando templates HTML
 const html = `
