@@ -1,0 +1,116 @@
+Numbers aula 01-12 da etapa 1
+
+### Inteiros e decimais
+- ```const radius =  10```
+- ```const pi = 3.14```
+
+## o que podemos fazer com números em Javascript?
+- Basiucamente tudo queuma operação aritmedica permite, adição, subtração, multiplicação e divisão
+
+### Operadores aritmedicos
+- ```const remiminder = 5 % 2```-> o modulo % mostra como resultado o resto da divição de 5 por 2 ao inves de mostra o resultado.
+
+- ```const area = pi * radius **2``` -> também temos a precedência para execução das operações, são elas
+
+* 1º parênteses
+* 2º expoentes ou raízes
+* 3º multiplicação e divisão
+* 4º adição e subtração
+
+### Operadores de incremento e decremento
+- usando incrementos para adicionar conteúdo ao variaveis ou diminuir.
+
+## incremento
+```const postLikes = 10
+   postLikes = postLikes +1 
+``` -> codigo esta errado pois não se pode atribuir em uma CONST
+
+```let postLikes = 10
+   postLikes = postLikes + 1 
+``` -> codigo esta certo pois se pode atribuir em uma LET
+- usando shorthand ou seja incurtando o código/atalho
+```let postLikes = 10
+   postLikes++	
+```
+## decremento
+```let postLikes = 10
+   postLikes = postLikes - 1 
+``` -> codigo esta certo pois se pode atribuir em uma LET
+- usando shorthand ou seja incurtando o código/atalho
+```let postLikes = 10
+   postLikes--	
+```
+
+### Operadores addition, subtraction, multiplication e division assignment
+- esse operador addition assignment, faz o operador receber tudo que já tem mais o valor atribuido.
+``` postLikes += 10 ```
+
+- esse operador subtraction assignment, faz o operador receber tudo que já tem e subtrair o valor atribuido.
+``` postLikes -= 5 ```
+
+- esse operador multiplication assignment, faz o operador receber tudo que já tem e multiplicar o valor atribuido.
+``` postLikes *= 10 ```
+
+- esse operador division assignment, faz o operador receber tudo que já tem e dividir o valor atribuido.
+``` postLikes /= 2 ```
+
+### NaN - not a number
+- Quando fizermos alguma operação que não resulta em um número esse valor vai aparecer ou seja quando tentar fazer uma operação que não faz sentido.
+``` console.log(7/'oi')```
+
+### Concatenação de string com número
+``` const likesMessage = 'Opost tem ' + postLikes + ' likes'```
+
+Nessa aula foi mostrado a forma de se trabalhar com Números em JavaScript, com isso aprendi que alem de fazer atribuições usando *=* , e também aprendi o porque de as vezes aperecer o *NaN* em algumas mensagens quando se esta verificando a saida dos dados.
+
+************************************
+************************************
+************************************
+************************************
+************************************
+************************************
+************************************
+************************************
+************************************
+
+Template strings aula 01-13 da etapa 1
+
+``` const postTitle = 'É bolacha ou biscoito?' ```
+``` const postAuthor = 'Matheus Saad' ```
+``` const postComments = 15 ```
+
+### Usando contacatenação
+```const postMessage = 'O post "' + postTitle +'", do ' +postAuthor+', tem '+postComments+'comentário'```
+- se usase-mos aspas *simples* no lugar das *aspas* duplas teriamos um erro de sintaxi.
+[colocar imagem dupla de código errado e erro]
+
+## para incluir as *aspas* sesjam simples ou duplas dentro de 
+uma string tem algumas alternativas como no exemplo a baixo.
+
+- Exemplo 01: ao usar barra invertida fazemos com o que esta após a barra *escape* ou seja o 
+JavaScript vai interpretar como um caracter e não como fechamento da string.
+
+``` console.log('Você manda do filme \'As Banquelas\'?') ```
+
+- Exemplo 02: usando aspas duplas para abri e fechar as 
+strings, assim podemos usar as aspas simples como caracteres normalmente
+
+``` console.log("Você manda do filme 'As Banquelas'?") ```
+
+- Exemplo 03: usando aspas simples para abri e fechar as 
+strings, assim podemos usar as aspas diplas como caracteres normalmente
+
+``` console.log('Você manda do filme "As Banquelas"?') ```
+
+### usando template strings
+- usando o template string ou seja a crase *``* hoje é considerada a 
+melhor forma de fazer interpolação sem precisa ficar concatenando como no exeplo assima
+
+# Quando usar template strints?
+- Se a estring que esta sendo criada precisar conter variavéis ou aspas ou é um template HTML.
+
+``` const postMessage = `O post "${postTitle}", do ${postAuthor}, tem ${postComments} comentários.` ```
+
+### criando tempaltes HTML
+- usando templates em HTML com template string, ajuda a montar até página em HTML dentro do JavaScript e 
+injetar em uma página HTML
