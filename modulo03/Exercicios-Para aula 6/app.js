@@ -7,11 +7,15 @@
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
 
-function multiplyBy2(number1 = 0, number2 = 0) {
-  return number1 * number2
+/*function multiplyBy2(number1 = 0, number2 = 0) {
+  return number1 * number2 }
+*/
+
+function multiply(firstNumber = 0, secondNumber = 0) {
+  return firstNumber * secondNumber
 }
 
-console.log(`2X4 = ${multiplyBy2(2, 4)}`)
+console.log(`2X4 = ${multiply(2, 4)}`)
 
 /*
   02
@@ -21,8 +25,8 @@ console.log(`2X4 = ${multiplyBy2(2, 4)}`)
     2 números.
 */
 
-const divide = function divideBy2(number1 = 0, number2 = 1) {
-  return number1 / number2
+const divide = function (firstNumber = 0, secondNumber = 0) {
+  return firstNumber / secondNumber
 }
 
 console.log(`4:2 = ${divide(4, 2)}`)
@@ -40,15 +44,19 @@ console.log(`4:2 = ${divide(4, 2)}`)
   "Esta é a Xª vez que essa string é exibida."
 */
 
-const amount = (number = 7) => {
-
-  for (let count = 1; count <= number; count++) {
-    console.log(`Esta é a ${count}ª vez que essa string é exibida.`)
-  }
+// const phrase = function (number = 7) {
+//   for (let i = 0; i < number; i++) {
+//     console.log(`Esta é a ${i + 1}ª vez que essa string é exibida.`)
+//   }
+// }
+const log = function (value = `Você deve passar um valor como argumento`) {
+  console.log(value)
 }
 
-amount()
-
+// for (let i = 0; i < 7; i++) {
+//   let counter = i + 1
+//   log(`Esta é a ${counter}ª vez que essa string é exibida.`)
+// }
 
 
 /*
@@ -64,6 +72,32 @@ amount()
 
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
 
+// const sentence = function (array = []) {
+//   let newArray = []
+
+//   for (let i = 0; i < array.length; i++) {
+//     newArray.push(array[i].toUpperCase())
+//   }
+
+//   return newArray
+
+// }
+const transformeToUpperCase = function (array = []) {
+  let newArray = []
+
+  for (let i = 0; i < array.length; i++) {
+    const wordInUpperCase = array[i].toUpperCase()
+    newArray.push(wordInUpperCase)
+  }
+
+  return newArray
+
+}
+
+const millennialWordsInUpperCase = transformeToUpperCase(millennialWords)
+
+log(millennialWordsInUpperCase)
+
 /*
   05
 
@@ -77,6 +111,40 @@ const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influenc
 
 const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
 
+// const isPositive = function (numbers = []) {
+//   let positive = 0;
+//   let negative = 0;
+//   let amount = null
+//   for (let i = 0; i < numbers.length; i++) {
+//     amount++
+//     if (numbers[i] > 0) {
+//       positive++
+//     } else {
+//       negative++
+//     }
+//   }
+//   return `O array "randomNumbers" possui ${amount} números, sendo ${positive} positivos e ${negative} negativos.`
+// }
+
+let positiveNumbersCounter = 0;
+let negativeNumbersCounter = 0;
+let amount = 0
+
+const isPositive = function (number = 0) {
+  return number >= 1;
+}
+
+for (let i = 0; i < randomNumbers.length; i++) {
+  amount = randomNumbers.length
+  const isPositiveNumber = isPositive(randomNumbers[i])
+  if (isPositiveNumber) {
+    positiveNumbersCounter++;
+  } else {
+    negativeNumbersCounter++;
+  }
+}
+console.log(`O array "randomNumbers" possui ${amount} números, sendo ${positiveNumbersCounter} positivos e ${negativeNumbersCounter} negativos.`)
+
 /*
   06
 
@@ -87,7 +155,29 @@ const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
     função.
 */
 
-// getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+const getOddNumbers = function (numbers = []) {
+  let newArray = []
+
+  for (let i = 0; i < numbers.length; i++) {
+    const number = numbers[i]
+    const isOddNumber = number % 2 !== 0
+
+    if (isOddNumber) {
+      newArray.push(number)
+    }
+  }
+  return newArray
+}
+
+const oddNumber = getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+
+console.log(oddNumber)
+
+
+
+
+
+
 
 /*
   07
@@ -125,3 +215,11 @@ const functions = [
   function () { return 'Índias' },
   function () { return 'Ocidentais.' }
 ]
+let sentence = "";
+
+for (let i = 0; i < functions.length; i++) {
+  const string = `${functions[i]()} `
+  sentence += string
+}
+
+console.log(sentence)
