@@ -1,0 +1,15 @@
+.myRed {
+    background-color: darkred;
+    color: aliceblue;
+    padding: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.myBlue {
+    background-color: rgb(19, 0, 139);
+    color: aliceblue;
+    padding: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}

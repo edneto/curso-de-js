@@ -1,0 +1,21 @@
+.title {
+    font-size: 1.5rem;
+    border: solid 2px crimson;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(87, 87, 87, 0.256);
+    color: #454444;
+}
+
+
+.error {
+    padding: 10px;
+    color: crimson;
+    border: 1px dotted crimson;
+}
+
+.success {
+    padding: 10px;
+    color: green;
+    border: 1px dotted green;
+}
